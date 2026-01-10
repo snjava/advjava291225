@@ -10,9 +10,9 @@ public class DBConnection {
         String password = "root";
         try {
             // 1. Register Driver
-            Class.forName(mysqlDriver);
+            Class.forName("com.mysql.cj.jdbc.Driver");
             // 2. Create Connection
-            Connection con = DriverManager.getConnection(mysqlUrl, userName, password);
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advjava2912", "root", "root");
             System.out.println("CONNECTION SUCCESSFUL...");
         } catch (Exception ex) {
             ex.printStackTrace();
