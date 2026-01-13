@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 public class SecondServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html"); // Set the type of response
+        resp.setContentType("text/html"); // Set the type of response (MIME Type)
         PrintWriter out = resp.getWriter(); // getWriter return the object using which you can set the char type of response
         //OutputStream out = resp.getOutputStream(); // to return the response if of byte type.
         out.print("This is the Text Type of Response");
