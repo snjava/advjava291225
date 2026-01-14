@@ -17,7 +17,7 @@ public class UserDetails extends HttpServlet {
                 out.print("<title>User Details</title>");
             out.print("</head>");
             out.print("<body>");
-                out.print("<form action='show-info'>");
+                out.print("<form action='show-info' method='POST'>");
                     out.print("Enter Name : <input type='text' name='name'>");
                     out.print("<br/><br/>");
                     out.print("Select Gender : <input type='radio' name='gender' value='Male'>Male");
@@ -25,7 +25,10 @@ public class UserDetails extends HttpServlet {
                     out.print("<br/><br/>");
                     out.print("Enter Contact : <input type='number' name='contact'>");
                     out.print("<br/><br/>");
+                    out.print("Enter Password : <input type='password' name='userPass'>");
+                    out.print("<br/><br/>");
                     out.print("<button type='submit'>Send</button>");
+                    out.print("<a href='show-info'>Click Here</a>");
                 out.print("</form>");
             out.print("</body>");
         out.print("</html>");
