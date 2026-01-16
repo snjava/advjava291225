@@ -15,7 +15,8 @@ public class Home extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.print("<h1>Welcome User to Home.</h1>");
         String userName = req.getParameter("uname").trim();
-
+        String email = (String) req.getAttribute("uemail");
         out.print("<h3>User , "+userName+"</h3>");
+        out.print("<h3>Email , "+email+"</h3>");
     }
 }
