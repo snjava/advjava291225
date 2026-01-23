@@ -8,7 +8,14 @@
   <name>session-tracking-1 Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <dependency>
+      <dependency>
+          <groupId>jakarta.servlet</groupId>
+          <artifactId>jakarta.servlet-api</artifactId>
+          <version>5.0.0</version>
+          <scope>provided</scope>
+      </dependency>
+
+      <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
