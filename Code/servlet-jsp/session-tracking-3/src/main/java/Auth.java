@@ -17,7 +17,6 @@ public class Auth extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("username");
         String password = req.getParameter("userpassword");
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advjava2912", "root", "root");
@@ -39,7 +38,5 @@ public class Auth extends HttpServlet {
             e.printStackTrace();
             resp.sendRedirect("login.jsp?msg=error");
         }
-
-
     }
 }
