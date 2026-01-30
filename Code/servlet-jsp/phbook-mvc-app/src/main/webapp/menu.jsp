@@ -7,10 +7,10 @@
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link active" href="home.jsp">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Create Contact</a>
+        <a class="nav-link" href="new-contact.jsp">Create Contact</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">View Contact</a>
