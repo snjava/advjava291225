@@ -1,0 +1,12 @@
+package edu.learning.model;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Scope("prototype")
+@Component
+public class Product {
+    public Product() {
+        System.out.println("Product Object Created...");
+    }
+}
