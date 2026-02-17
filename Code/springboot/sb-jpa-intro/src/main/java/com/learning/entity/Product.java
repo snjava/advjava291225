@@ -1,4 +1,4 @@
-package com.learning;
+package com.learning.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
