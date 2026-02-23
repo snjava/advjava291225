@@ -1,5 +1,6 @@
 package com.learning.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Table(name = "address_details")
@@ -13,6 +14,8 @@ public class Address {
     private String pinncode;
     private String state;
     private String addressline;
+
+    @JsonBackReference // Not go into Employee class
     @JoinColumn(name = "eid")
     @OneToOne(cascade = CascadeType.ALL)
     private Employee employee;

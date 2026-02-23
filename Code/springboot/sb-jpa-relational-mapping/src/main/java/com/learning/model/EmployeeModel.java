@@ -1,36 +1,17 @@
-package com.learning.entity;
+package com.learning.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.*;
+import com.learning.entity.Address;
+import com.learning.entity.EducationDetails;
 
 import java.util.List;
 
-@Table(name = "emp_details")
-@Entity
-public class Employee {
-    @Column(name = "empid")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
+public class EmployeeModel {
     private int id;
     private String name;
     private String email;
     private String contact;
-
-    @JsonManagedReference // Enable Address Class Reference
-    @OneToOne(mappedBy = "employee")
     private Address address;
-
-    @JsonManagedReference // Enable Address Class Reference
-    @OneToMany(mappedBy = "employee")
-    private List<EducationDetails>  educationDetails;
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+    private List<EducationDetails> educationDetails;
 
     public int getId() {
         return id;
@@ -62,5 +43,21 @@ public class Employee {
 
     public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public List<EducationDetails> getEducationDetails() {
+        return educationDetails;
+    }
+
+    public void setEducationDetails(List<EducationDetails> educationDetails) {
+        this.educationDetails = educationDetails;
     }
 }

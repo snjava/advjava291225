@@ -3,6 +3,7 @@ package com.learning.controller;
 import com.learning.entity.Employee;
 import com.learning.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,7 @@ public class EmployeeController {
         return employeeRepository.save(employee);
     }
 
-    @PostMapping("/get-emp")
+    @GetMapping("/get-emp")
     public List<Employee> getEmpDetails() {
         return employeeRepository.findAll();
     }

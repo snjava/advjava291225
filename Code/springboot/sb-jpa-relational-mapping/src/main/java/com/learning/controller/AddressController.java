@@ -3,6 +3,7 @@ package com.learning.controller;
 import com.learning.entity.Address;
 import com.learning.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,7 @@ public class AddressController {
         return addressRepository.save(address);
     }
 
-    @PostMapping("/get-add")
+    @GetMapping("/get-add")
     public List<Address> getAddDetails() {
         return addressRepository.findAll();
     }
